@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Step | Rutina 100kg Cut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <style>
+        /* Ocultar barra de desplazamiento para un look más nativo en móvil */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        .tab-content { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Estilos de Drag & Drop */
+        .sortable-ghost { opacity: 0.4; background-color: #1e293b; border: 2px dashed #3b82f6 !important; border-radius: 0.75rem; }
+        .sortable-drag { cursor: grabbing !important; transform: scale(1.02); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+        .cursor-grab { cursor: grab; -webkit-tap-highlight-color: transparent; }
+        .cursor-grabbing { cursor: grabbing; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased pb-20">
+
+    <!-- Cabecera -->
+    <header class="bg-slate-800 p-5 shadow-md sticky top-0 z-10">
+        <div class="flex justify-between items-center mb-2">
+            <h1 class="text-xl font-bold text-white"><i class="fas fa-dumbbell text-blue-500 mr-2"></i>Next Step Cut</h1>
+            <span class="text-xs font-semibold bg-slate-700 px-2 py-1 rounded text-slate-300">Nicolás M.</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-3">Hipertrofia 80/20 • Déficit 100kg</p>
+        
+        <!-- Leyenda de colores -->
+        <div class="flex space-x-2 text-[10px] font-bold uppercase tracking-wider">
+            <div class="bg-red-900/50 text-red-400 px-2 py-1 rounded border border-red-800 flex items-center">
+                <div class="w-2 h-2 rounded-full bg-red-500 mr-1.5"></div> Sarcomérica (Fuerza)
+            </div>
+            <div class="bg-blue-900/50 text-blue-400 px-2 py-1 rounded border border-blue-800 flex items-center">
+                <div class="w-2 h-2 rounded-full bg-blue-500 mr-1.5"></div> Sarcoplasmática (Bombeo)
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación por Días (Tabs) -->
+    <div class="flex overflow-x-auto p-4 space-x-3 snap-x">
+        <button id="btn-dia1" onclick="showTab('dia1')" class="tab-btn flex-shrink-0 snap-center bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-colors">Día 1</button>
+        <button id="btn-dia2" onclick="showTab('dia2')" class="tab-btn flex-shrink-0 snap-center bg-slate-800 text-slate-400 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-colors">Día 2</button>
+        <button id="btn-dia3" onclick="showTab('dia3')" class="tab-btn flex-shrink-0 snap-center bg-slate-800 text-slate-400 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-colors">Día 3</button>
+        <button id="btn-dia4" onclick="showTab('dia4')" class="tab-btn flex-shrink-0 snap-center bg-slate-800 text-slate-400 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-colors">Día 4</button>
+    </div>
+
+    <!-- Contenedor Principal -->
+    <main class="px-4 max-w-md mx-auto">
+        <!-- ================= DIA 1 ================= -->
+        <div id="dia1" class="tab-content">
+            <div class="flex justify-between items-end mb-4 border-b border-slate-700 pb-2">
+                <h2 class="text-lg font-bold text-white">Pecho y Tríceps + Core</h2>
+                <span class="text-[9px] text-slate-400 bg-slate-800 px-2 py-1 rounded-full"><i class="fas fa-hand-pointer text-blue-500 mr-1"></i>Mantén para ordenar</span>
+            </div>
+            
+            <div id="lista-dia1" class="sortable-list">
+                <!-- Ejercicio 1 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 overflow-hidden mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Press de Pecho Plano]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Press de Pecho Plano</h3>
+                            <p class="text-xs text-slate-400 mb-2">Barra o Mancuernas</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Pectoral Medio</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">4 x 4-6</p>
+                            <p class="text-[10px] text-slate-500 uppercase">2-3 min rest</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 2 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Press Inclinado]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Press Inclinado</h3>
+                            <p class="text-xs text-slate-400 mb-2">Con Mancuernas</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Pectoral Superior</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 3 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Fondos en Paralelas]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Fondos en Paralelas</h3>
+                            <p class="text-xs text-slate-400 mb-2">Lastrados si es posible</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Pectoral Inferior / Tríceps</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 4 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Cruces en Polea]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Cruces en Polea</h3>
+                            <p class="text-xs text-slate-400 mb-2">O Máquina Pec-Deck</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Pectoral Interno (Centro)</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-blue-400 text-lg">3 x 12-15</p>
+                            <p class="text-[10px] text-slate-500 uppercase">1 min rest</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 5 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Press Francés]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Press Francés</h3>
+                            <p class="text-xs text-slate-400 mb-2">Con barra Z</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Tríceps Cabeza Larga</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 6 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Extensión Polea]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Extensión Polea</h3>
+                            <p class="text-xs text-slate-400 mb-2">Con cuerda</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Tríceps Bombeo Final</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-blue-400 text-lg">3 x 12-15</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Cierre lista-dia1 -->
+            
+            <!-- Core y Cardio -->
+            <div class="grid grid-cols-2 gap-3 mt-6">
+                <div class="bg-slate-800 p-3 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-shield-halved text-emerald-500 text-2xl mb-2"></i>
+                    <span class="text-xs font-bold">Crunches Polea</span>
+                    <span class="text-[10px] text-slate-400 mt-1">4 x 10-12 (Pesados)</span>
+                </div>
+                <div class="bg-slate-800 p-3 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-fire-flame-curved text-orange-500 text-2xl mb-2"></i>
+                    <span class="text-xs font-bold">Cardio LISS</span>
+                    <span class="text-[10px] text-slate-400 mt-1">20 Minutos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= DIA 2 ================= -->
+        <div id="dia2" class="tab-content hidden">
+            <div class="flex justify-between items-end mb-4 border-b border-slate-700 pb-2">
+                <h2 class="text-lg font-bold text-white">Espalda y Bíceps + Antebrazo</h2>
+                <span class="text-[9px] text-slate-400 bg-slate-800 px-2 py-1 rounded-full"><i class="fas fa-hand-pointer text-blue-500 mr-1"></i>Mantén para ordenar</span>
+            </div>
+            
+            <div id="lista-dia2" class="sortable-list">
+                <!-- Ejercicio 1 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Dominadas]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Dominadas o Jalón</h3>
+                            <p class="text-xs text-slate-400 mb-2">Lastradas / Pesado</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Dorsal Ancho/Amplitud</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">4 x 4-6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 2 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Remo con Barra]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Remo con Barra</h3>
+                            <p class="text-xs text-slate-400 mb-2">O T-Bar</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Espalda Media/Grosor</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 3 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Remo con Mancuerna]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Remo c/Mancuerna</h3>
+                            <p class="text-xs text-slate-400 mb-2">A una mano</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Dorsal Bajo Unilateral</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 4 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Facepull en Polea]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Facepull</h3>
+                            <p class="text-xs text-slate-400 mb-2">En polea alta con cuerda</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Hombro Posterior/Postura</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-blue-400 text-lg">3 x 12-15</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 5 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Pulldown Brazos Rígidos]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Pulldown Brazos Rígidos</h3>
+                            <p class="text-xs text-slate-400 mb-2">Polea alta</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Dorsal Aislamiento</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-blue-400 text-lg">3 x 12-15</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 6 (Convertido a tarjeta completa para permitir reordenar fluidamente) -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative flex items-center">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-16 h-16 flex items-center justify-center rounded mr-4 flex-shrink-0">
+                        <i class="fas fa-image text-slate-400"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-md">Curl con Barra</h3>
+                        <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded mt-1 inline-block">Bíceps C. Corta</span>
+                    </div>
+                    <div class="text-right pr-4">
+                        <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 7 (Convertido a tarjeta completa) -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative flex items-center">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-16 h-16 flex items-center justify-center rounded mr-4 flex-shrink-0">
+                        <i class="fas fa-image text-slate-400"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-md">Curl Polea Baja</h3>
+                        <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded mt-1 inline-block">Bíceps Pico Superior</span>
+                    </div>
+                    <div class="text-right pr-4">
+                        <p class="font-black text-blue-400 text-lg">3 x 12-15</p>
+                    </div>
+                </div>
+            </div> <!-- Cierre lista-dia2 -->
+            
+            <!-- Antebrazo y Cardio -->
+            <div class="grid grid-cols-2 gap-3 mt-6">
+                <div class="bg-slate-800 p-3 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-hand-fist text-indigo-500 text-2xl mb-2"></i>
+                    <span class="text-xs font-bold">Paseo del Granjero</span>
+                    <span class="text-[10px] text-slate-400 mt-1">3 x Fallo de Agarre</span>
+                </div>
+                <div class="bg-slate-800 p-3 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-fire-flame-curved text-orange-500 text-2xl mb-2"></i>
+                    <span class="text-xs font-bold">Cardio LISS</span>
+                    <span class="text-[10px] text-slate-400 mt-1">20 Minutos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= DIA 3 ================= -->
+        <div id="dia3" class="tab-content hidden">
+            <div class="flex justify-between items-end mb-4 border-b border-slate-700 pb-2">
+                <h2 class="text-lg font-bold text-white">Pierna Completa</h2>
+                <span class="text-[9px] text-slate-400 bg-slate-800 px-2 py-1 rounded-full"><i class="fas fa-hand-pointer text-blue-500 mr-1"></i>Mantén para ordenar</span>
+            </div>
+            
+            <div id="lista-dia3" class="sortable-list">
+                <!-- Ejercicio 1 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Sentadilla Libre]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Sentadilla Libre</h3>
+                            <p class="text-xs text-slate-400 mb-2">O Hack Squat</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Cuádriceps y Glúteo</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">4 x 4-6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 2 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Sentadillas Búlgaras]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Sentadillas Búlgaras</h3>
+                            <p class="text-xs text-slate-400 mb-2">Con Mancuernas</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Unilateral / Equilibrio</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">4 x 6-8 <span class="text-xs text-slate-400">c/u</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 3 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Prensa de Piernas]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Prensa de Piernas</h3>
+                            <p class="text-xs text-slate-400 mb-2">Pesada</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Cuádriceps General</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 6-8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 4 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative flex justify-between items-center">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="flex items-center">
+                        <div class="bg-slate-700 w-16 h-16 flex items-center justify-center rounded mr-3 flex-shrink-0 mt-2">
+                            <i class="fas fa-image text-slate-400"></i>
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-bold text-md">Extensión Pierna</h3>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded mt-1 inline-block">Corte Frontal</span>
+                        </div>
+                    </div>
+                    <p class="font-black text-blue-400 text-lg text-right pr-4 mt-2">3 x 12-15</p>
+                </div>
+
+                <!-- Ejercicio 5 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative flex justify-between items-center">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="flex items-center">
+                        <div class="bg-slate-700 w-16 h-16 flex items-center justify-center rounded mr-3 flex-shrink-0 mt-2">
+                            <i class="fas fa-image text-slate-400"></i>
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-bold text-md">Curl de Isquios</h3>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded mt-1 inline-block">Corte Trasero</span>
+                        </div>
+                    </div>
+                    <p class="font-black text-blue-400 text-lg text-right pr-4 mt-2">4 x 12-15</p>
+                </div>
+            </div> <!-- Cierre lista-dia3 -->
+            
+            <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-700 text-center mt-6">
+                <i class="fas fa-bed text-slate-400 text-xl mb-1"></i>
+                <p class="text-xs text-slate-400">Día de gasto máximo calórico. Sin Cardio/Core hoy.</p>
+            </div>
+        </div>
+
+        <!-- ================= DIA 4 ================= -->
+        <div id="dia4" class="tab-content hidden">
+            <div class="flex justify-between items-end mb-4 border-b border-slate-700 pb-2">
+                <h2 class="text-lg font-bold text-white">Hombros + Core y Antebrazo</h2>
+                <span class="text-[9px] text-slate-400 bg-slate-800 px-2 py-1 rounded-full"><i class="fas fa-hand-pointer text-blue-500 mr-1"></i>Mantén para ordenar</span>
+            </div>
+            
+            <div id="lista-dia4" class="sortable-list">
+                <!-- Ejercicio 1 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Press Militar]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Press Militar</h3>
+                            <p class="text-xs text-slate-400 mb-2">Barra o Mancuernas</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Deltoides Anterior/Frontal</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">4 x 4-6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 2 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Elevaciones Laterales]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Elevaciones Laterales</h3>
+                            <p class="text-xs text-slate-400 mb-2">Pesadas c/ Mancuernas</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Deltoides Medio/Anchura</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">4 x 8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 3 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-red-500 cursor-grab relative">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="bg-slate-700 w-full h-32 flex items-center justify-center rounded-lg mb-3 mt-1">
+                        <span class="text-slate-400 text-sm font-medium"><i class="fas fa-image mr-2"></i>[Pájaros]</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-md">Pájaros</h3>
+                            <p class="text-xs text-slate-400 mb-2">Mancuernas o Máquina</p>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded">Deltoides Posterior</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-black text-red-400 text-lg">3 x 8-10</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 4 -->
+                <div class="bg-slate-800 rounded-xl p-4 mb-4 shadow-lg border-l-4 border-blue-500 cursor-grab relative flex justify-between items-center">
+                    <div class="absolute top-2 right-3 text-slate-600/50 text-sm"><i class="fas fa-grip-lines"></i></div>
+                    <div class="flex items-center">
+                        <div class="bg-slate-700 w-16 h-16 flex items-center justify-center rounded mr-3 flex-shrink-0 mt-2">
+                            <i class="fas fa-image text-slate-400"></i>
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-bold text-md">Laterales Polea</h3>
+                            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded mt-1 inline-block">Bombeo Constante</span>
+                        </div>
+                    </div>
+                    <p class="font-black text-blue-400 text-lg text-right pr-4 mt-2">3 x 12-15</p>
+                </div>
+            </div> <!-- Cierre lista-dia4 -->
+            
+            <!-- Antebrazo, Core y Cardio -->
+            <div class="grid grid-cols-3 gap-2 mt-6">
+                <div class="bg-slate-800 p-2 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-hand text-indigo-500 text-xl mb-1"></i>
+                    <span class="text-[10px] font-bold leading-tight">Curl Muñeca</span>
+                    <span class="text-[9px] text-slate-400 mt-1">3 x 12-15</span>
+                </div>
+                <div class="bg-slate-800 p-2 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-shield-halved text-emerald-500 text-xl mb-1"></i>
+                    <span class="text-[10px] font-bold leading-tight">Elev. Piernas</span>
+                    <span class="text-[9px] text-slate-400 mt-1">4 x Fallo</span>
+                </div>
+                <div class="bg-slate-800 p-2 rounded-lg border border-slate-700 flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-fire-flame-curved text-orange-500 text-xl mb-1"></i>
+                    <span class="text-[10px] font-bold leading-tight">Cardio</span>
+                    <span class="text-[9px] text-slate-400 mt-1">20 Minutos</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            // Resetear todos los botones
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('bg-blue-600', 'text-white');
+                el.classList.add('bg-slate-800', 'text-slate-400');
+            });
+            
+            // Mostrar contenido actual
+            document.getElementById(tabId).classList.remove('hidden');
+            // Resaltar botón actual
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-slate-800', 'text-slate-400');
+            activeBtn.classList.add('bg-blue-600', 'text-white');
+            
+            // Hacer scroll del contenedor de botones hacia el botón activo
+            activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dias = ['lista-dia1', 'lista-dia2', 'lista-dia3', 'lista-dia4'];
+            
+            dias.forEach(diaId => {
+                const listEl = document.getElementById(diaId);
+                if(listEl) {
+                    new Sortable(listEl, {
+                        animation: 200, // Transición suave al moverse
+                        ghostClass: 'sortable-ghost', // Clase CSS de la sombra
+                        dragClass: 'sortable-drag', // Clase CSS del elemento flotante
+                        delay: 150, // Pequeño retraso (150ms) para que puedas hacer scroll en el celular sin arrastrar sin querer
+                        delayOnTouchOnly: true, // El retraso solo se aplica en móviles
+                        touchStartThreshold: 3 // Evita que se cancele el drag por micro-temblores del dedo
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
